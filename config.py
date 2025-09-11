@@ -1,0 +1,6 @@
+# config.py
+DATASET_PATH = "dummy_dataset"
+IMG_HEIGHT = 224
+IMG_WIDTH = 224
+BATCH_SIZE = 8
+NUM_CLASSES = 3
