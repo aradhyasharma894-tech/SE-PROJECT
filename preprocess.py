@@ -20,3 +20,15 @@ if __name__ == "__main__":
         image = preprocess_image(sys.argv[1])
         if image is not None:
             print(f"Image preprocessed successfully! Shape: {image.shape}")
+# preprocess.py
+
+import cv2
+
+def resize_image(image, size=(224, 224)):
+    """Resize image to standard input size."""
+    return cv2.resize(image, size)
+
+def normalize_image(image):
+    """Normalize pixel values to [0, 1] range."""
+    return image / 255.0
+
