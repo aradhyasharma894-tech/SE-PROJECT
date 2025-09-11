@@ -23,6 +23,16 @@ class DatasetLoader:
                 self.labels.append(0)  # dummy label
         print(f"Loaded {len(self.images)} images.")
         return np.array(self.images), np.array(self.labels)
+# dataset_loader.py
+
+def load_dataset(path):
+    """
+    Simulates loading a labeled dataset of X-ray and CT scans.
+    This will be expanded later with actual dataset paths and formats.
+    """
+    print(f"Loading dataset from {path}... [Placeholder]")
+    return []
+
 
 # Example usage
 if __name__ == "__main__":
