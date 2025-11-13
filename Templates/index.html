@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Medical Diagnosis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>AI-Powered Medical Diagnosis</h1>
+    <p>Upload an X-ray or CT scan to detect Pneumonia or COVID-19</p>
+
+    <!-- ✅ Fixed form action -->
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" accept="image/*" required>
+      <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+      <h2>{{ result }}</h2>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
